@@ -1,0 +1,37 @@
+.Container {
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+    position: relative;
+}
+
+.resizer {
+    border: 2px solid blue;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    position: absolute;
+}
+
+.topLeft {
+    cursor: e-resize;
+    left: -8px;
+    top: -8px;
+}
+
+.topRight {
+    top: -8px;
+    right: -8px;
+    cursor: e-resize;
+}
+
+.bottomLeft {
+    bottom: -8px;
+    left: -8px;
+}
+
+.bottomRight {
+    right: -8px;
+    bottom: -8px;
+}
