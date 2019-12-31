@@ -135,6 +135,7 @@ const ResizableDiv = (props) => {
         old_div_top_px = div_end_top;
         old_div_width_px = div_end_width;
         old_div_height_px = div_end_height;
+        console.log('1');
     }
 
     return (
@@ -169,3 +170,5 @@ const ResizableDiv = (props) => {
 }
 
 export default ResizableDiv;
+
+//zzsd
