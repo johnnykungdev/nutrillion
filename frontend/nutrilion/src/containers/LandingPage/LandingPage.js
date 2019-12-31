@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const LandingPage = () => {
+const LandingPage = (props) => {
     const [ info, setInfo ] = useState({
         name: '',
         phone: '',

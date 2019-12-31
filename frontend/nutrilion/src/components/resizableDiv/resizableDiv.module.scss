@@ -1,8 +1,12 @@
 .Container {
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    height: 10vw;
     border: 2px solid green;
-    position: relative;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 100;
+    top: 20vw;
+    left: 10vw;
 }
 
 .resizer {
@@ -12,6 +16,7 @@
     width: 10px;
     margin: 0;
     position: absolute;
+    z-index: 300;
 }
 
 .topLeft {

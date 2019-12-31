@@ -1,13 +1,17 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
 
 import LandingPage from './containers/LandingPage/LandingPage';
+import TagPage from './containers/TagPage/TagPage';
 
 function App() {
     return (
-        <div className="App">
-            <LandingPage />
-        </div>
+        <Switch>
+            <Route to='/tagging' render={() => <TagPage />} />
+            <Route to='/' exact render={() => <LandingPage />} />
+        </Switch>
     );
 }
 
