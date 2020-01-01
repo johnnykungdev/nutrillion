@@ -6,6 +6,11 @@ import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter } from 'react-router-dom';
 
+window.onresize = function(){
+    window.location.reload();
+    console.log(document.documentElement.clientWidth);
+}
+
 const app = (
     <BrowserRouter>
         <App />

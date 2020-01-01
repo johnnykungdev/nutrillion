@@ -8,6 +8,9 @@ const TagPage = (props) => {
     return (
         <div className={classes.TagPage}>
             <PictureContainer />
+            <div className={classes.buttonDiv}>
+                <button>下一步</button>
+            </div>
         </div>
     )
 }
