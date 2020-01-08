@@ -1,13 +1,21 @@
 .PictureContainer {
-    width: 80%;
+    width: 90%;
     border: 1px solid gray;
     margin: 0 auto 0 auto;
     position: relative;
-    top: 10%;
 }
 
 .Image {
     width: 100%;
+}
+
+.setTagButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 80px;
+    height: 20px;
+    background-color: white;
 }
 
 .tagBox {

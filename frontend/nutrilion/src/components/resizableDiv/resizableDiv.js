@@ -11,17 +11,11 @@ const ResizableDiv = (props) => {
     const old_div_top_px = props.top.replace('%', '') / 100 * props.image_height;
     const resizableContainer = useRef();
 
-    console.log(props.box_id);
-    console.log(props.width);
-    console.log(old_div_width_px);
-    console.log(old_div_height_px);
-
     let browser_width = document.documentElement.clientWidth;
     let browser_height = document.documentElement.clientHeight;
     let touch_start_x = 0;
     let touch_start_y = 0;
     let resDiv = document.querySelector(`.${classes.Container}`);
-
 
     const touch_end = {
         height: props.height,
@@ -29,7 +23,6 @@ const ResizableDiv = (props) => {
         left: props.left,
         top: props.top
     }
-
 
     const setInitailTags = (target) => {
         target.style.width = props.width;
@@ -55,7 +48,6 @@ const ResizableDiv = (props) => {
     }, [props])
 
     const onToucStart = (e) => {
-
         touch_start_x = e.touches[0].pageX;
         touch_start_y = e.touches[0].pageY;
         console.log(touch_start_x);
@@ -145,16 +137,26 @@ const ResizableDiv = (props) => {
     }
 
     const onTouchEnd = (e, box_id) => {
-        console.log('onTouchEnd');
-        console.log(touch_end);
+        e.preventDefault();
         touch_end.image_height = props.image_height;
-        console.log(box_id);
         props.setTagPos(box_id, touch_end);
     }
 
+    const resDivStyle = {
+        'border': '2px solid green',
+        'boxSizing': 'border-box',
+        'position': 'absolute',
+        'zIndex': '100',
+        'width': `${props.width}`,
+        'height': `${props.height}`,
+        'top': `${props.top}`,
+        'left': `${props.left}`
+    }
+
     return (
-        <div ref={resizableContainer} className={classes.Container}>
+        <div ref={resizableContainer} className={classes.Container} style={resDivStyle}>
             <div className={classes.resizers}>
+                <div className={classes.TagTitle}>new Tag</div>
                 <div 
                     className={`${classes.resizer} ${classes.topLeft}`}
                     onTouchStart={(e) => onToucStart(e)}
@@ -184,5 +186,3 @@ const ResizableDiv = (props) => {
 }
 
 export default ResizableDiv;
-
-//zzsd

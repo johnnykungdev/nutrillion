@@ -2,4 +2,37 @@
     text-align: center;
     overflow: hidden;
     height: 100%;
+
+    display: grid;
+    grid-template-rows: 75px 2fr 3fr;
+    min-width: 320px;
+}
+
+.TitleRow {
+    height: auto;
+    height: 38px;
+    position: relative;
+    top: 18.5px;
+}
+
+.Title {
+    display: inline-block;
+    color: rgba(0, 183, 255, 0.767);
+    margin: auto 20px auto 20px;
+    vertical-align: middle;
+}
+
+.TagsList {
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.tagNameInput {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 20px auto 20px auto;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
 }
