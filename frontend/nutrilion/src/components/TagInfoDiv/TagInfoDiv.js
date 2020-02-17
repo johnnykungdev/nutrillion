@@ -8,13 +8,13 @@ const taginfodiv = (props) => {
         return (
             <div 
                 className={classes.EditingDiv}
-                onClick={(e) => props.tagEditingHandler(e, props.name)}
+                onClick={(e) => props.tagEditingHandler(e, props.tag_id)}
                 name='clickable'>
                 <input 
                     className={classes.EditingInput}
                     id='input'
                     placeholder={props.name}
-                    onChange={(e) => console.log(e.target.value)}/>
+                    onChange={(e) => props.editTagNameHandler(e, props.tag_id)}/>
                 <p 
                     id='deleteIcon'
                     className={classes.DeleteIcon}
@@ -26,7 +26,7 @@ const taginfodiv = (props) => {
     return (
         <div 
             className={classes.TagInfoDiv}
-            onClick={(e) => props.tagEditingHandler(e, props.name)}
+            onClick={(e) => props.tagEditingHandler(e, props.tag_id)}
             name='clickable'>
             <p name='clickable'>{props.name}</p>
         </div>
